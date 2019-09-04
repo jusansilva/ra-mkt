@@ -1880,7 +1880,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'home',
+  data: function data() {
+    return {
+      input: {}
+    };
+  },
+  methods: {}
+});
 
 /***/ }),
 
@@ -3077,7 +3107,78 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("APP")])
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c(
+        "div",
+        [
+          _c(
+            "a-scene",
+            {
+              attrs: {
+                embedded: "",
+                arjs:
+                  "sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180"
+              }
+            },
+            [
+              _c(
+                "a-marker",
+                {
+                  attrs: {
+                    markerhandler: "",
+                    preset: "hiro",
+                    emitevents: "true",
+                    cursor: "rayOrigin: mouse",
+                    id: "area"
+                  }
+                },
+                [
+                  _c(
+                    "a-sphere",
+                    {
+                      attrs: {
+                        id: "globo",
+                        src:
+                          "https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg",
+                        radius: "0.5",
+                        position: "0 0.8 0",
+                        "segments-height": "53"
+                      }
+                    },
+                    [
+                      _c("a-animation", {
+                        attrs: {
+                          attribute: "scale",
+                          dur: "1000",
+                          from: "1 1 1",
+                          to: "2 2 2",
+                          direction: "alternate-reverse",
+                          easing: "ease-in-out-circ",
+                          repeat: "indefinite"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("a-entity", { attrs: { camera: "" } })
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "fade" } }, [_c("router-view")], 1)
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -18113,7 +18214,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_axios__WEBPACK_IMPORTED_MODUL
 var routes = [{
   name: 'Home',
   path: '/',
-  component: _components_App_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  component: _components_Home_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
